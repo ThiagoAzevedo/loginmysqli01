@@ -8,10 +8,6 @@ function validarLogin($user, $pass, $conn) {
         $user = mysqli_fetch_assoc($query);
         if ($pass == $user['log_pass']) {
             return $user;
-        } else {
-            return null;
-            //$_SESSION['danger'] = 'Usuário ou senha não existe!';
-            //header('Location: index.php');
         }
     }
 }

@@ -48,6 +48,15 @@
                     <?php
                     session_unset($_SESSION['danger']);
                 endif;
+
+                if (isset($_SESSION['success'])) :
+                    ?>
+                    <div class = "alert alert-success" role = "alert">
+                        <?= $_SESSION['success']; ?>
+                    </div>
+                    <?php
+                    session_unset($_SESSION['success']);
+                endif;
                 ?>
             </div>
             <!-- end:Main Form -->

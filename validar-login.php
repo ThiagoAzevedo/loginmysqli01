@@ -19,4 +19,4 @@ if ((isset($user)) && (isset($pass))) {
         header('Location: index.php');
     }
 }
-
+die();
