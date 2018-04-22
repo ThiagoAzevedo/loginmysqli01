@@ -1,7 +1,9 @@
 <?php
 
 function validarLogin($user, $pass, $conn) {
-    $sql = "SELECT * FROM tblogins WHERE log_username = '{$user}'";
+    $useresc = mysqli_real_escape_string($conn, $user);
+    $sql = "SELECT * FROM tblogins WHERE log_username = '{$useresc}'";
+    var_dump($sql);
     $query = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($query);
     if ($row) {
